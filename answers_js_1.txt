@@ -1,0 +1,338 @@
+3.1
+let nameS=name.trim().length;
+let lastS=last_name.trim().length;
+console.log(nameS+lastS);
+
+3.2
+console.log(word.charAt(0).toUpperCase());
+
+3.3
+console.log(word_1+' '+word_2);
+
+3.4
+let num_1=Math.ceil(value);
+let num_2=Math.floor(value);
+let num_3=Math.round(value);
+console.log(Math.trunc(Math.sqrt(num_1+num_2+num_3)));
+
+3.5
+console.log(`Имя: "${obj.name}" Фамилия: '${obj.last_name}' Возраст: ${obj.age}`);
+
+3.6
+let obj={name, last_name, age};
+console.log(obj);
+
+3.7
+if(value==null){
+console.log("null")}
+else{console.log(typeof value)}
+
+3.8
+console.log(Number(num_1)+Number(num_2));
+
+3.9
+console.log(Number(parseFloat(size)));
+
+3.10
+console.log((a*b)**2);
+
+3.11
+console.log(Math.sqrt(a**2+b**2));
+
+3.12
+console.log(Number(parseFloat(a))*Number(parseFloat(b))*Number(parseFloat(c)));
+
+4.1
+if(speed>=0&&speed<=30){console.log('Вы едете слишком медленно')
+}else if(speed>=31&&speed<=70){console.log('Вы едете с нормальной скоростью')
+}else{console.log('Вы едете слишком быстро, сбавьте скорость')}
+
+4.2
+if(isNaN(parseInt(price))){console.log('Не число')
+}else if(parseInt(price)<=0){console.log('Число не корректное')
+}else{console.log(parseInt(price))}
+
+4.3
+if(a>b && a>c){console.log(a)
+}else if(b>a && b>c){console.log(b)
+}else{console.log(c)}
+
+4.4
+console.log( word_1.length<word_2.length? word_2:word_1);
+
+4.5
+switch (task) {
+  case 'удалить':
+    console.log('delete');
+break;
+  case 'переименовать':
+    console.log('rename');
+break;
+  case 'редактировать':
+    console.log('edit');
+  break;
+}
+
+4.6
+switch (range) {
+  case 'month':
+    console.log(price + " Р в "+"месяц");
+break;
+  case 'day':
+    console.log(price + " Р в "+"день");
+break;
+  case 'week':
+    console.log(price + " Р в "+"неделю");
+  break;
+}
+
+4.7
+switch (sign) {
+  case '+':
+     console.log(a + b);
+break;
+  case '-':
+     console.log(a - b);
+break;
+  case '/':
+     console.log(a / b);
+break;
+case '*':
+     console.log(a * b);
+break;
+}
+
+4.8
+switch (sign) {
+  case '+':
+     console.log(a + b);
+break;
+  case '-':
+     console.log(a - b);
+break;
+  case '/':
+     console.log((b<0 || b>0) ? a/b : 'Делить на 0 нельзя!' );
+break;
+case '*':
+     console.log(a * b);
+break;
+}
+
+4.9
+let activity;
+if(Number(temp)==25 && weather=="clear"){
+activity="golf";
+} else if(Number(temp)>25 && weather=="clear"){
+activity="golf";
+} else if(Number(temp)>10 && Number(temp)<24 && weather=="clear"){
+activity="bowling";
+} else{
+activity="hiking";
+}
+
+5.1
+let sum=0;
+for (let i=start; i<=end;i+=5){
+sum+=i;
+}
+console.log(sum);
+
+5.2
+let str='';
+for( let i=word.length-1;i>=0;i--){
+str+=word[i];
+}
+console.log(str)
+
+5.3
+let word_low= word.toLowerCase();
+let result='';
+for ( let i=word_low.length-1; i>=0; i--){
+result +=word_low[i];
+}
+if (result === word_low) {
+    console.log("Слово является палиндромом!");
+} else {
+    console.log("Слово не является палиндромом!");
+}
+
+6.1
+function priceMessage(){
+console.log("Данный товар стоит "+price+" рублей");
+}
+priceMessage(price)
+
+6.2
+function mult(){
+console.log(num_1*num_2)
+}
+mult(num_1,num_2);
+
+6.3
+function square(){
+return num**2}
+
+6.4
+let res='';
+for (let i=0;i<3;i++){
+num = num**2;
+res += num + ' ';
+}
+console.log(res.trim());
+
+6.5
+function getNumber(data){
+	console.log(isNaN(data) ? 0 : data);
+}
+getNumber(parseInt(data));
+
+6.6
+function getPercent(){
+console.log(value/total*100);
+}
+getPercent(value, total);
+
+7.1
+let res={};
+for(let key in obj){
+(res[obj[key]]===undefined)?res[obj[key]]=1:res[obj[key]]++;}
+console.log(res)
+
+7.2
+let max=list[0].price;
+let res=list[0].product;
+for(let i=0;i<list.length;i++){
+if(list[i].price>max){
+max=list[i].price;
+res=list[i].product}
+}
+console.log(res)
+
+9.1
+list.unshift('Яблоко');
+list.pop();
+list.push('Клубника');
+console.log(list)
+
+9.2
+let max=list[0];
+for(let i=0;i<list.length;i++){
+if(list[i].length>max.length){max=list[i]}
+}console.log(max)
+
+9.3
+let res=list_1.concat(list_2);
+let result=[];
+res.forEach((el)=>{
+result.push(el**2);})
+console.log(result)
+
+9.4
+let sum=0;
+list.forEach((el)=>{sum+=el});
+console.log(sum)
+
+9.5
+let sum=0;
+list.forEach((el)=>{if(el>0){sum+=el}});
+console.log(sum)
+
+9.6
+let sum=0;
+for (let i = 2; i < list.length; i++) {
+  let isPrime = true;
+    for (let j = 2; j < i; j++) {
+    if (i % j === 0) {
+      isPrime = false;
+    }
+  }
+    if (isPrime) {
+    sum += i;
+  }
+}
+console.log(sum);
+
+9.7
+console.log(Math.min(...list)*Math.max(...list));
+
+9.8
+let res=[];
+for(let i=list.length-1;i>=0;i--){
+res.push(list[i])
+}
+console.log(res)
+
+9.9
+const arr=[];
+let word='';
+for(let i=0;i<sentence.length;i++){
+if(sentence[i]==0){
+arr.push(word);
+word='';
+}
+else{
+word+=sentence[i];
+}
+}
+arr.push(word);
+console.log(arr)
+
+9.10
+let res=0;
+function count(){
+list.forEach((el)=>{
+if(el%2===0){res++;}})
+return res;
+}
+count(list);
+console.log(res);
+
+9.11
+let res=0;
+function average(){
+list.forEach((el)=>{
+res+=el;
+});
+}
+average(list);
+console.log(Math.round(res/list.length));
+
+9.12
+let res=0;
+for(let val of list){
+if(typeof val === "boolean"){break;}
+else{res+=val;};
+};
+console.log(res);
+
+9.13
+let res=[];
+for(let i=10;i<=20;i++){
+res.push(i);
+}
+console.log(res)
+
+9.14
+let numbers_list=[];
+for (let i=0;i<list.length;i++){
+if(typeof list[i]==='number'){numbers_list.push(list[i]);}
+else if(list[i]===false){break;}
+else{continue;}
+}
+console.log(numbers_list);
+
+9.15
+let str=list.join(', ').toLowerCase().split(', ');
+let sum=0;
+for (let i=0;i<str.length;i++){
+if(str[i]!="default"){sum+=1;}
+else{continue;}
+}
+console.log(sum);
+
+9.16
+let res='';
+for(let i=0;i<list.length;i++){
+res+=list[i][0];
+}
+console.log(res)
